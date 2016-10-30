@@ -72,7 +72,7 @@ function decode(key::Array{UInt8, 1}, iv::Array{UInt8, 1}, ciphertext::Array{UIn
   plaintext = trim_padding_PKCS5(decrypt(dec, :CBC, iv, ciphertext))
   if(reasonable(plaintext))
     text = String(plaintext)
-    open("C:/Users/nowyd_000/Desktop/julia/aes/tmp/t1.txt", "a") do file
+    open("C:/Users/nowyd_000/Desktop/julia/aes/tmp/t3.txt", "a") do file
       write(file,text)
       write(file,"\n")
     end
